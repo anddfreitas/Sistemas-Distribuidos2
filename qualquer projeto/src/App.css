@@ -1,0 +1,64 @@
+/* Estilos principais */
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  overflow: hidden;
+  position: relative;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Título */
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 10; /* Garante que o título fique à frente das imagens */
+  position: relative;
+}
+
+/* Container de figuras geométricas */
+.shapes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos para a figura geométrica */
+.shape {
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+  z-index: 5; /* Garante que as figuras geométricas fiquem atrás do título */
+}
+
+/* Estilos para o círculo */
+.shape.circle {
+  border-radius: 50%;
+}
+
+/* Estilos para o quadrado */
+.shape.square {
+  border-radius: 0;
+}
+
+/* Estilos para o triângulo */
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid;
+}
